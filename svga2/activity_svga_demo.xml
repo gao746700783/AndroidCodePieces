@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--使用dataBinding的话，根标签要用layout-->
+    <data>
+        <!--类似于java文件的import导入包-->
+        <import type="android.view.View" />
+
+        <!--类似于java文件的属性定义，name表示属性名，type表示属性类型-->
+        <!--        <variable-->
+        <!--            name="bean"-->
+        <!--            type="com.test.adapter.SceneViewBean" />-->
+        <variable
+            name="svgaDemoVM"
+            type="com.example.myapplication.ui.SVGADemoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.SvgaDemoActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSVGAS"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+<!--        <androidx.core.widget.NestedScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                &lt;!&ndash; 原始写法一 &ndash;&gt;-->
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:source="svgs/angel.svga"-->
+<!--                    bind:autoPlay="true" />-->
+
+<!--                &lt;!&ndash; 写法一 &ndash;&gt;-->
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:svga_str='@{"svgs/rose.svga"}'-->
+<!--                    bind:autoPlay="true" />-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str='@{"svgs/kingset.svga"}'-->
+<!--                    bind:svga_rep_text='@{"replace you text here as banner."}'-->
+<!--                    bind:svga_rep_key='@{"banner"}'-->
+<!--                    />-->
+
+<!--                &lt;!&ndash; 写法二 &ndash;&gt;-->
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(0)}" />-->
+
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(1)}" />-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(2)}"/>-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(3)}" />-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(4)}" />-->
+
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(5)}" />-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(6)}"/>-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(7)}" />-->
+
+<!--                <com.opensource.svgaplayer.SVGAImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="300dp"-->
+<!--                    bind:autoPlay="true"-->
+<!--                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(8)}"/>-->
+
+<!--&lt;!&ndash;                <com.opensource.svgaplayer.SVGAImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    bind:autoPlay="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    bind:loopCount="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(9)}"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <com.opensource.svgaplayer.SVGAImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                    bind:autoPlay="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    bind:loopCount="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    bind:svga_str="@{svgaDemoVM.svgaAssetsList.get(10)}"/>&ndash;&gt;-->
+
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.core.widget.NestedScrollView>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

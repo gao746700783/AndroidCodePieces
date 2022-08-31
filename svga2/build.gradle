@@ -1,0 +1,6 @@
+
+    implementation 'io.github.gao746700783:rvBindingAdapter:0.0.4'
+
+    //svga动态图加载框架
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.6.1'
+
